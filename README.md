@@ -1,7 +1,7 @@
 # Pagister
 
 ## Project setup
-```
+
 - Install [Node.js](https://nodejs.org/en/).
 - In your VisualStudio go to project folder (../pagister). Open new Terminal (Terminal -> New Terminal)
 - In terminal check that you are in the right folder (e.g. 'PS C:\Projects\pagister>')
@@ -15,7 +15,7 @@ The aplication can be found on your browser [http://localhost:8080/](http://loca
 To checkout the project install any Windows tool for GitHub (e.g. [GitHub Desktop](https://desktop.github.com/))
 
 ## All commands:
-
+```
 npm install
 ```
 
