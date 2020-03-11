@@ -8,6 +8,8 @@
     <h3>To Do List</h3>
     <ul>
       <li>Watch Vue Tutorial</li>
+      <li>Try out Vue</li>
+      <li>Write my Vue app</li>
     </ul>
     <h3>Essential Links</h3>
     <ul>
