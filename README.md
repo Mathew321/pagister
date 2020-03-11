@@ -6,9 +6,9 @@
 - In your VisualStudio go to project folder (../pagister). Open new Terminal (Terminal -> New Terminal)
 - In terminal check that you are in the right folder (e.g. 'PS C:\Projects\pagister>')
 - To launch your application locally run the following commands in terminal:
--- `npm install -g @vue/cli`
--- `npm install`
--- `npm run serve`
+    - `npm install -g @vue/cli`
+    - `npm install`
+    - `npm run serve`
 The aplication can be found on your browser [http://localhost:8080/](http://localhost:8080/)
 - To stop your application in your Terminal press `ctrl + C` and press `y` on the confirmation question
 
