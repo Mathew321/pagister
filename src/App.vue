@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/rooster.png">
+    <img alt="Vue logo" src="./assets/lol.gif">
     <LoginPage msg="Welcome Matvei and Marcin!"/>
   </div>
 </template>
