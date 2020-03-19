@@ -12,14 +12,9 @@
       <li class="li">Write my Vue app</li>
     </ul>
     <h3>Essential Links</h3>
-<<<<<<< Updated upstream
     <h3>First commit from Marcin!</h3>
     <ul>
-      <li><a href="https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/" target="_blank" >Vue JS video course</a></li>
-=======
-    <ul class="ul">
       <li class="li"><a href="https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/" target="_blank" class="a">Vue JS video course</a></li>
->>>>>>> Stashed changes
     </ul>
     <h3>First commit from Marcin!</h3>
   </div>
