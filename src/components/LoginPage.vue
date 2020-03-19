@@ -5,16 +5,23 @@
       Welcome to Pagister
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
-    <h3>To Do List</h3>
-    <ul>
-      <li>Watch Vue Tutorial</li>
-      <li>Try out Vue</li>
-      <li>Write my Vue app</li>
+    <h3 class="h3">To Do List</h3>
+    <ul class="ul">
+      <li class="li">Watch Vue Tutorial</li>
+      <li class="li">Try out Vue</li>
+      <li class="li">Write my Vue app</li>
     </ul>
     <h3>Essential Links</h3>
+<<<<<<< Updated upstream
+    <h3>First commit from Marcin!</h3>
     <ul>
       <li><a href="https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/" target="_blank" >Vue JS video course</a></li>
+=======
+    <ul class="ul">
+      <li class="li"><a href="https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/" target="_blank" class="a">Vue JS video course</a></li>
+>>>>>>> Stashed changes
     </ul>
+    <h3>First commit from Marcin!</h3>
   </div>
 </template>
 
@@ -26,21 +33,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
