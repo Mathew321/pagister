@@ -12,6 +12,7 @@
       <li>Write my Vue app</li>
     </ul>
     <h3>Essential Links</h3>
+    <h3>First commit from Marcin!</h3>
     <ul>
       <li><a href="https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/" target="_blank" >Vue JS video course</a></li>
     </ul>
