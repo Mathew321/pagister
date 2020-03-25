@@ -1,21 +1,28 @@
 <template>
   <div>
-    <img alt="Vue logo" src="../assets/rooster.png">
+
+    <img alt="Vue logo" src="../assets/geenMagisterlogo.png" width="500">
+        <br>
+    <br>
+    <br>
+    <br>
+
     <h1>
-      Welkom to Pagister
+      Log in
     </h1>
+
     <div class="data">
       <form>
-        <label for="uname"><b>Username</b></label>
+        <label for="uname"><b>Username </b></label>
         <input v-model="uname" type="text" placeholder="Enter Username" name="uname" required>
           <br>
           <br>
-        <label for="pwd"><b>Password</b></label>
+        <label for="pwd"><b>Password </b></label>
         <input v-model="password" type="password" placeholder="Enter Password" name="pwd" required>
           <br>
           <br>
         <label>
-          <input id="cb" type="checkbox" checked="checked" name="remember"> Remember me
+          <input id="cb" type="checkbox" checked="checked" name="remember"> Onthoud mij
         </label>
           <br><br>
         <input v-on:click="login(uname, password)" type="submit" value="Login" />
