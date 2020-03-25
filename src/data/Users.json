@@ -1,6 +1,7 @@
 [
     {
-        "Profile": "Marcin Samborski",
+        "login": "marcin",
+        "name": "Marcin Samborski",
         "ID": 69,
         "PWD": "M.1234",
         "Cijfers": [{
@@ -24,9 +25,10 @@
         }]
     },
     {
-        "Profile": "Matvei Fedasenka",
+        "login": "matvei",
+        "name": "Matvei Fedasenka",
         "ID": 100,
-        "PWD": "MF.1234",
+        "PWD": "123",
         "Cijfers": [{
             "Wiskunde": 10,
             "Nederlands": 9.9,
