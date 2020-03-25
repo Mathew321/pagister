@@ -4,6 +4,9 @@ import App from './App.vue';
 
 import LoginPage from './components/LoginPage.vue';
 import MainPage from './components/MainPage.vue';
+import AgendaPage from './components/AgendaPage.vue';
+import CijferPage from './components/CijferPage.vue';
+import ProfilePage from './components/ProfilePage.vue'
 
 const router = new VueRouter({
   mode: "history",
@@ -15,6 +18,18 @@ const router = new VueRouter({
     {
       path: "/Main",
       component: MainPage
+    },
+    {
+      path: "/Agenda",
+      component: AgendaPage
+    },
+    {
+      path: "/Cijfers",
+      component: CijferPage
+    },
+    {
+      path: "/Profile",
+      component: ProfilePage
     }
   ]
 })
