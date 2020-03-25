@@ -38,7 +38,7 @@ export default {
       }
       if (pwd === this.password) {
         console.log("Login Success");
-        this.$router.push("/schedule");
+        this.$router.push("/Main");
         return true;
       }
       console.log("Login Failed");

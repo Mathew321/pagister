@@ -13,7 +13,7 @@ const router = new VueRouter({
       component: LoginPage
     },
     {
-      path: "/schedule",
+      path: "/Main",
       component: MainPage
     }
   ]
