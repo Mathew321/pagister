@@ -2,6 +2,7 @@
     {
         "login": "marcin",
         "name": "Marcin Samborski",
+        "class": "M4A",
         "ID": 69,
         "PWD": "M.1234",
         "Cijfers": [{
@@ -27,6 +28,7 @@
     {
         "login": "matvei",
         "name": "Matvei Fedasenka",
+        "class": "M4B",
         "ID": 100,
         "PWD": "123",
         "Cijfers": [{

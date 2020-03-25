@@ -37,5 +37,18 @@ const router = new VueRouter({
 Vue.use(VueRouter)
 new Vue({
   router,
-  render: h => h(App)
+  render: h => h(App),
+  state: {
+    loggedInUser: ""
+  },
+  mutations: {
+    setLoggedInUser(login) {
+      this.$state.loggedInUser = login;
+    }
+  },
+  actions: {
+    setLoggedInUser({commit}, token) {
+      commit('setToken', token)
+    }
+  }
 }).$mount("#app");
