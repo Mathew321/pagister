@@ -1,4 +1,5 @@
 <template>
+
 <div>
     <div class="half-page-block">
       <info-block :infoList="list"/>
@@ -47,6 +48,8 @@ function buildList() {
 </script>
 
 <style scoped>
+
+
 .half-page-block {
   display: inline-block;
   width: 40%;
