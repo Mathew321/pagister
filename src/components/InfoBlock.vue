@@ -4,12 +4,9 @@
             <h3>Header</h3>
             <br>
         </li>
-        
-       
             <li class="class1">
             <h4></h4>
             <span> </span>
-            <br>
         </li>
     </ul>
 </template>
@@ -33,7 +30,6 @@ border-radius: 0px 0px 15px 15px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-
 }
 
 

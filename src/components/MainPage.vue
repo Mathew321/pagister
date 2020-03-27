@@ -1,57 +1,78 @@
 <template>
-
 <div>
-    <div class="half-page-block">
-      <info-block :infoList="list"/>
-       <info-block :infoList="list"/>
+    <div id="main-view" :class="[{'collapsed' : collapsed}]">
+      <info-page />
     </div>
-    <div class="half-page-block">
-      <info-block :infoList="list"/>
-      <info-block :infoList="list"/>
-    </div>
+    <sidebar-menu :collapsed="collapsed" :menu="menu" @collapse="onCollapse" @itemClick="onItemClick" >
+      <span slot="toggle-icon"><i class="fa fa-arrows-alt-h" /></span>
+    </sidebar-menu>
 </div>
 </template>
 
 <script>
-import InfoBlock from "./InfoBlock.vue";
+import InfoPage from "./InfoPage.vue";
+
 export default {
   name: 'MainPage',
   components: {
-    InfoBlock
+    InfoPage
   },
   data() {
     return {
-      list: buildList()
+      collapsed: false,
+      menu: [{
+        header: true,
+        title: 'Pagister',
+        hiddenOnCollapse: true
+        },
+        {
+        href: '/Main',
+        title: 'Vandaag',
+        icon: 'fa fa-calendar-check'
+        },
+        {
+        href: '/Profile',
+        title: 'Profile',
+        icon: 'fa fa-user',
+        },
+        {
+        href: '/Agenda',
+        title: 'Agenda',
+        icon: 'fa fa-calendar-alt',
+        },
+        {
+        href: '/Cijfers',
+        title: 'Cijfers',
+        icon: 'fa fa-award',
+        }
+      ]
     };
   },
   methods: {
     getData() {
       var users = require('../data/Users.json');
       console.log("First user: " + users[0].User); 
+    },
+    onCollapse (collapsed) {
+      console.log(collapsed)
+      this.collapsed = collapsed
     }
   }
-}
-
-function buildList() {
-  let listItem1 = {
-    "title": "Title 1",
-    "text": "Text 1"
-  }
-   let listItem2 = {
-    "title": "Title 2",
-    "text": "Text 2"
-  }
-
-  console.log([listItem1, listItem2]);
-  return [listItem1, listItem2];
 }
 </script>
 
 <style scoped>
-
-
 .half-page-block {
   display: inline-block;
   width: 40%;
+}
+.v-sidebar-menu {
+  width: 200px;
+}
+#main-view {
+  padding-left: 200px;
+}
+#main-view.collapsed {
+  padding-left: 50px;
 }
 </style>

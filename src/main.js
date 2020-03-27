@@ -1,6 +1,10 @@
 import Vue from 'vue';
 import VueRouter from "vue-router";
+import VueSidebarMenu from 'vue-sidebar-menu';
+import 'vue-sidebar-menu/dist/vue-sidebar-menu.css';
+
 import App from './App.vue';
+Vue.use(VueSidebarMenu)
 
 import LoginPage from './components/LoginPage.vue';
 import MainPage from './components/MainPage.vue';
@@ -45,10 +49,10 @@ new Vue({
     setLoggedInUser(login) {
       this.$state.loggedInUser = login;
     }
-  },
-  actions: {
-    setLoggedInUser({commit}, token) {
-      commit('setToken', token)
-    }
+//  },
+//  actions: {
+//    setLoggedInUser({commit}, token) {
+//      commit('setToken', token)
+//    }
   }
 }).$mount("#app");

@@ -1,6 +1,6 @@
 <template>
     <div>
-      
+
     </div>
 </template>
 
@@ -8,7 +8,34 @@
 export default {
   name: 'ProfilePage',
   data() {
-    return {};
+    return {
+      menu: [{
+        header: true,
+        title: 'Main Navigation',
+        hiddenOnCollapse: true
+        },
+        {
+        href: '/Main',
+        title: 'Vandaag',
+        icon: ''
+        },
+        {
+        href: '/Profile',
+        title: 'Profile',
+        icon: '',
+        },
+        {
+        href: '/Agenda',
+        title: 'Agenda',
+        icon: '',
+        },
+        {
+        href: '/Cijfers',
+        title: 'Cijfers',
+        icon: '',
+        }
+      ]
+    };
   },
   methods: {
     getData() {
