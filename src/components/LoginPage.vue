@@ -12,10 +12,10 @@
     <div id="alles">
     <div id="loginteksten">
     <h1 id="welkomtekst">
-      Welkom,
+      Welkom bij Pagister,
     </h1>
     <h2 id="logintekst">
-      Log in
+      Log in of maak een account
     </h2>
     </div>
 
@@ -25,16 +25,23 @@
         <label for="uname"><b></b></label>
         <input v-model="uname" type="text" placeholder="Gebruikersnaam" name="uname" required>
           <br>
-          <br>
+          
         <label for="pwd"><b></b></label>
         <input v-model="password" type="password" placeholder="Wachtwoord" name="pwd" required>
+        <br>
+          <input v-on:click="login(uname, password)" type="submit" value="Login" />
           <br>
-          <br>
+          <div id="regknop">
+          <input v-on:click="login(uname, password)" type="submit" value="Maak een account" />
+          
         <label>
           <input id="cb" type="checkbox" checked="checked" name="remember"> Onthoud mij
         </label>
-          <br><br>
-        <input v-on:click="login(uname, password)" type="submit" value="Login" />
+        </div>
+          <br>
+        
+       
+        
         </div>
       </form>
     </div>
@@ -138,6 +145,22 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
+
+#regknop input[type=submit] {
+  width: 170px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 10px 8px 0px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#regknop input[type=submit]:hover {
+  background-color: #45a049;
+}
+
 
 
 
