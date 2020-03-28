@@ -1,24 +1,37 @@
 <template>
-<div>
+<div class="main-container">
     <div id="main-view" :class="[{'collapsed' : collapsed}]">
-      <info-page />
-    </div>
-    <sidebar-menu :collapsed="collapsed" :menu="menu" @collapse="onCollapse" @itemClick="onItemClick" >
-      <span slot="toggle-icon"><i class="fa fa-arrows-alt-h" /></span>
-    </sidebar-menu>
+      <sidebar-menu :collapsed="collapsed" :menu="menu" @collapse="on-collapse" @item-click="onItemClick" >
+        <span slot="toggle-icon"><i class="fa fa-arrows-alt-h" /></span>
+      </sidebar-menu>
+      <info-page  v-show="infopage" />
+      <agenda-page  v-show="agenda" />
+      <cijfer-page  v-show="cijfers" />
+      <profile-page  v-show="profile" />
+  </div>
 </div>
 </template>
 
 <script>
 import InfoPage from "./InfoPage.vue";
+import AgendaPage from "./AgendaPage.vue";
+import CijferPage from "./CijferPage.vue";
+import ProfilePage from "./ProfilePage.vue";
 
 export default {
   name: 'MainPage',
   components: {
-    InfoPage
+    InfoPage,
+    AgendaPage,
+    CijferPage,
+    ProfilePage
   },
   data() {
     return {
+      infopage: true,
+      agenda: false,
+      cijfers: false,
+      profile: false,
       collapsed: false,
       menu: [{
         header: true,
@@ -26,22 +39,18 @@ export default {
         hiddenOnCollapse: true
         },
         {
-        href: '/Main',
         title: 'Vandaag',
         icon: 'fa fa-calendar-check'
         },
         {
-        href: '/Profile',
         title: 'Profile',
         icon: 'fa fa-user',
         },
         {
-        href: '/Agenda',
         title: 'Agenda',
         icon: 'fa fa-calendar-alt',
         },
         {
-        href: '/Cijfers',
         title: 'Cijfers',
         icon: 'fa fa-award',
         }
@@ -49,30 +58,60 @@ export default {
     };
   },
   methods: {
-    getData() {
-      var users = require('../data/Users.json');
-      console.log("First user: " + users[0].User); 
-    },
     onCollapse (collapsed) {
-      console.log(collapsed)
+      console.log("collapsed: " + collapsed)
       this.collapsed = collapsed
+    },
+    onItemClick(event, item) {
+      if (item.title === "Vandaag") {
+        this.$data.infopage = true;
+        this.$data.agenda = false;
+        this.$data.cijfers = false;
+        this.$data.profile = false;
+      }
+      else if (item.title === "Agenda") {
+        this.$data.infopage = false;
+        this.$data.agenda = true;
+        this.$data.cijfers = false;
+        this.$data.profile = false;
+      }
+      else if (item.title === "Cijfers") {
+        this.$data.infopage = false;
+        this.$data.agenda = false;
+        this.$data.cijfers = true;
+        this.$data.profile = false;
+      }
+      else if (item.title === "Profile") {
+        this.$data.infopage = false;
+        this.$data.agenda = false;
+        this.$data.cijfers = false;
+        this.$data.profile = true;
+      }
     }
   }
 }
+
 </script>
 
 <style scoped>
-.half-page-block {
-  display: inline-block;
-  width: 40%;
-}
 .v-sidebar-menu {
-  width: 200px;
+width: 200px;
 }
-#main-view {
-  padding-left: 200px;
+
+.v-sidebar-menu-vsm_collapsed {
+padding-left: 35px;
 }
-#main-view.collapsed {
+
+.main-container {
+  display: flex;
+}
+
+#main-view-collapsed {
   padding-left: 50px;
+}
+
+#main-view {
+  display: inline-block;
+  padding-left: 200px;
 }
 </style>

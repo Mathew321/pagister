@@ -1,4 +1,6 @@
 import Vue from 'vue';
+import Vuex from 'vuex';
+import store from "./store.js"
 import VueRouter from "vue-router";
 import VueSidebarMenu from 'vue-sidebar-menu';
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css';
@@ -15,6 +17,10 @@ import ProfilePage from './components/ProfilePage.vue'
 const router = new VueRouter({
   mode: "history",
   routes: [
+    {
+      path: "/",
+      redirect: "/Login"
+    },
     {
       path: "/Login",
       component: LoginPage
@@ -36,23 +42,12 @@ const router = new VueRouter({
       component: ProfilePage
     }
   ]
-})
+});
 
 Vue.use(VueRouter)
+Vue.use(Vuex)
 new Vue({
   router,
-  render: h => h(App),
-  state: {
-    loggedInUser: ""
-  },
-  mutations: {
-    setLoggedInUser(login) {
-      this.$state.loggedInUser = login;
-    }
-//  },
-//  actions: {
-//    setLoggedInUser({commit}, token) {
-//      commit('setToken', token)
-//    }
-  }
+  store,
+  render: h => h(App)
 }).$mount("#app");

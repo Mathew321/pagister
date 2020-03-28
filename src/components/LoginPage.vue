@@ -24,15 +24,16 @@
         <div id="loginpagina">
         <label for="uname"><b></b></label>
         <input v-model="uname" type="text" placeholder="Gebruikersnaam" name="uname" required>
-          <br>
-          
+        <br>
+        
         <label for="pwd"><b></b></label>
         <input v-model="password" type="password" placeholder="Wachtwoord" name="pwd" required>
         <br>
-          <input v-on:click="login(uname, password)" type="submit" value="Login" />
-          <br>
-          <div id="regknop">
-          <input v-on:click="login(uname, password)" type="submit" value="Maak een account" />
+
+        <input v-on:click="login(uname, password)" type="submit" value="Login" />
+        <br>
+        <div id="regknop">
+        <input v-on:click="login(uname, password)" type="submit" value="Maak een account" />
           
         <label>
           <input id="cb" type="checkbox" checked="checked" name="remember"> Onthoud mij
@@ -52,17 +53,26 @@
 <script>
 export default {
   name: 'LoginPage',
+  data() {
+    return {
+        uname: "",
+        password: ""
+    };
+  },
   methods: {
     login() {
       var users = require('../data/Users.json');
       var index = users.map(e => e.login).indexOf(this.uname);
-      var pwd = users[index].PWD;
+      var pwd = users[index].pwd;
       if (index === -1) {
         console.log("Login Failed");
         return false;
       }
       if (pwd === this.password) {
         console.log("Login Success");
+        console.log("User id: " + users[index].id);
+        this.$store.userId= users[index].id;
+        console.log("User id from store: " + this.$store.userId)
         this.$router.push("/Main");
         return true;
       }
@@ -74,44 +84,29 @@ export default {
 </script>
 
 <style scoped>
-    #loginpagina{
-      
-      font-family: 'Sen', sans-serif;
-      
-     
-    
-      
-    }
-    #loginteksten #welkomtekst{
-      
-      font-family: 'Sen', sans-serif;
-      font-style: bold;
-      font-size: 45px;
-      color: darkolivegreen;
-      
-      
-    }
-      #loginteksten #logintekst{
-      
-      font-family: 'Sen', sans-serif;
-      font-style: bold;
-      font-size: 25px;
-      color: #333;
+#loginpagina{
+  font-family: 'Sen', sans-serif;
+}
 
-      
-    }
-    #pagisterlogo{
-      font-family: 'Sen', sans-serif;
-      text-align: left;
-      margin-left: 15px;
+#loginteksten #welkomtekst{
+  font-family: 'Sen', sans-serif;
+  font-style: bold;
+  font-size: 45px;
+  color: darkolivegreen;
+}
 
-        
-
-    }
-
-   
-
-    input[type=text], select {
+#loginteksten #logintekst{
+  font-family: 'Sen', sans-serif;
+  font-style: bold;
+  font-size: 25px;
+  color: #333;
+}
+#pagisterlogo{
+  font-family: 'Sen', sans-serif;
+  text-align: left;
+  margin-left: 15px;
+}
+input[type=text], select {
   width: 300px;
   padding: 12px 20px;
   margin: 8px 0;
@@ -121,7 +116,7 @@ export default {
   box-sizing: border-box;
 }
 
-    input[type=password], select {
+input[type=password], select {
   width: 300px;
   padding: 12px 20px;
   margin: 8px 0;
@@ -160,8 +155,5 @@ input[type=submit]:hover {
 #regknop input[type=submit]:hover {
   background-color: #45a049;
 }
-
-
-
-
 </style>
+

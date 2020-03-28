@@ -1,350 +1,399 @@
-[
-    {
-        "week_1": [{
-            "monday": [{
-                "lesson_1": {
+[{
+    "week_1": {
+        "monday": [{
+            "lessons": [
+                {
                     "name": "Nederlands",
+                    "code": "NE",
                     "lokaal": "J117",
-                    "homework": ""
+                    "homework": "leren, blz.123"
                 },
-                "lesson_2": {
+                {
                     "name": "Geschiedenis",
+                    "code": "GS",
                     "lokaal": "J033",
-                    "homework": ""
+                    "homework": "Find the clue"
                 },
-                "lesson_3": {
+                {
                     "name": "Maatschapijleer",
+                    "code": "MA",
                     "lokaal": "J097",
-                    "homework": ""
+                    "homework": "No homework"
                 },
-                "lesson_4": {
+                {
                     "name": "Natuurkunde",
+                    "code": "NA",
                     "lokaal": "J037",
-                    "homework": ""
+                    "homework": "Stop!"
                 },
-                "lesson_5": {
+                {
                     "name": "Muziek",
+                    "code": "MU",
                     "lokaal": "J814",
-                    "homework": ""
+                    "homework": "Bla-bla"
                 },
-                "lesson_6": {
+                {
                     "name": "Aardrijkskunde",
+                    "code": "AK",
                     "lokaal": "J1202",
-                    "homework": ""
+                    "homework": "Test"
                 },
-                "lesson_7": {
+                {
                     "name": "Tekenen",
+                    "code": "TE",
                     "lokaal": "J642",
-                    "homework": ""
+                    "homework": "Catch the unicorn"
                 }
-            }],
-            "tuesday": [{
-                "lesson_1": {
+            ]
+        }],
+        "tuesday": [{
+            "lessons": [
+                {
                     "name": "ITTL",
+                    "code": "ITTL",
                     "lokaal": "J137",
                     "homework": ""
                 },
-                "lesson_2": {
+                {
                     "name": "ITTL",
-                        "lokaal": "J137",
-                    "homework": ""
-                },
-                "lesson_3": {
-                    "name": "Wiskunde",
-                    "lokaal": "J263",
-                    "homework": ""
-                },
-                "lesson_4": {
-                    "name": "Techniek",
-                    "lokaal": "J472",
-                    "homework": ""
-                },
-                "lesson_5": {
-                    "name": "LO",
-                    "lokaal": "L17",
-                    "homework": ""
-                },
-                "lesson_6": {
-                    "name": "LO",
-                    "lokaal": "L17",
-                    "homework": ""
-                }
-            }],
-            "wednesday": [{
-                "lesson_1": {
-                    "name": "Wiskunde",
-                    "lokaal": "J363",
-                    "homework": ""
-                },
-                "lesson_2": {
-                    "name": "Natuurkunde",
-                    "lokaal": "J271",
-                    "homework": ""
-                },
-                "lesson_3": {
-                    "name": "Scheikunde",
-                    "lokaal": "J102",
-                    "homework": ""
-                },
-                "lesson_4": {
-                    "name": "Frans",
-                    "lokaal": "J153",
-                    "homework": ""
-                },
-                "lesson_5": {
-                    "name": "Mentorles",
-                    "lokaal": "J183",
-                    "homework": ""
-                }
-            }],
-            "Thursday": [{
-                "lesson_1": {
-                    "name": "Biologie",
-                    "lokaal": "J093",
-                    "homework": ""
-                },
-                "lesson_2": {
-                    "name": "Biologie",
-                    "lokaal": "J093",
-                    "homework": ""
-                },
-                "lesson_3": {
-                    "name": "Scheikunde",
-                    "lokaal": "J047",
-                    "homework": ""
-                },
-                "lesson_4": {
-                    "name": "Natuurkunde",
-                    "lokaal": "J254",
-                    "homework": ""
-                },
-                "lesson_5": {
-                    "name": "Maatschapijleer",
-                    "lokaal": "J244",
-                    "homework": ""
-                },
-                "lesson_6": {
-                    "name": "Duits",
-                    "lokaal": "J122",
-                    "homework": ""
-                },
-                "lesson_7": {
-                    "name": "Wiskunde",
-                    "lokaal": "J372",
-                    "homework": ""
-                },
-                "lesson_8": {
-                    "name": "Frans",
-                    "lokaal": "J123",
-                    "homework": ""
-                },
-                "lesson_9": {
-                    "name": "Aardrijkskunde",
-                    "lokaal": "J263",
-                    "homework": ""
-                }
-            }],
-            "friday": [{
-                "lesson_1": {
-                    "name": "Biologie",
-                    "lokaal": "J117",
-                    "homework": ""
-                },
-                "lesson_2": {
-                    "name": "Frans",
-                    "lokaal": "J033",
-                    "homework": ""
-                },
-                "lesson_3": {
-                    "name": "Scheikunde",
-                    "lokaal": "J097",
-                    "homework": ""
-                },
-                "lesson_4": {
-                    "name": "Natuurkunde",
-                    "lokaal": "J037",
-                    "homework": ""
-                },
-                "lesson_5": {
-                    "name": "Duits",
-                    "lokaal": "J814",
-                    "homework": ""
-                }
-            }]
-        }]
-    },
-    {
-        "week_2": [{
-            "monday": [{
-                "lesson_1": {
-                    "name": "Nederlands",
-                    "lokaal": "J117",
-                    "homework": ""
-                },
-                "lesson_2": {
-                    "name": "Geschiedenis",
-                    "lokaal": "J033",
-                    "homework": ""
-                },
-                "lesson_3": {
-                    "name": "Maatschapijleer",
-                    "lokaal": "J097",
-                    "homework": ""
-                },
-                "lesson_4": {
-                    "name": "Natuurkunde",
-                    "lokaal": "J037",
-                    "homework": ""
-                },
-                "lesson_5": {
-                    "name": "Muziek",
-                    "lokaal": "J814",
-                    "homework": ""
-                },
-                "lesson_6": {
-                    "name": "Aardrijkskunde",
-                    "lokaal": "J1202",
-                    "homework": ""
-                },
-                "lesson_7": {
-                    "name": "Tekenen",
-                    "lokaal": "J642",
-                    "homework": ""
-                }
-            }],
-            "tuesday": [{
-                "lesson_1": {
-                    "name": "ITTL",
+                    "code": "ITTL",
                     "lokaal": "J137",
                     "homework": ""
                 },
-                "lesson_2": {
-                    "name": "ITTL",
-                        "lokaal": "J137",
-                    "homework": ""
-                },
-                "lesson_3": {
+                {
                     "name": "Wiskunde",
+                    "code": "WI",
                     "lokaal": "J263",
                     "homework": ""
                 },
-                "lesson_4": {
+                {
                     "name": "Techniek",
+                    "code": "TC",
                     "lokaal": "J472",
                     "homework": ""
                 },
-                "lesson_5": {
+                {
                     "name": "LO",
+                    "code": "LO",
                     "lokaal": "L17",
                     "homework": ""
                 },
-                "lesson_6": {
+                {
                     "name": "LO",
+                    "code": "LO",
                     "lokaal": "L17",
                     "homework": ""
                 }
-            }],
-            "wednesday": [{
-                "lesson_1": {
+            ]
+        }],
+        "wednesday": [{
+            "lessons": [
+                {
                     "name": "Wiskunde",
+                    "code": "WI",
                     "lokaal": "J363",
                     "homework": ""
                 },
-                "lesson_2": {
+                {
                     "name": "Natuurkunde",
+                    "code": "NA",
                     "lokaal": "J271",
                     "homework": ""
                 },
-                "lesson_3": {
+                {
                     "name": "Scheikunde",
+                    "code": "SK",
                     "lokaal": "J102",
                     "homework": ""
                 },
-                "lesson_4": {
+                {
                     "name": "Frans",
+                    "code": "FA",
                     "lokaal": "J153",
                     "homework": ""
                 },
-                "lesson_5": {
+                {
                     "name": "Mentorles",
+                    "code": "ML",
                     "lokaal": "J183",
                     "homework": ""
                 }
-            }],
-            "Thursday": [{
-                "lesson_1": {
+            ]
+        }],
+        "thursday": [{
+            "lessons": [
+                {
                     "name": "Biologie",
+                    "code": "BIO",
                     "lokaal": "J093",
                     "homework": ""
                 },
-                "lesson_2": {
+                {
                     "name": "Biologie",
+                    "code": "BIO",
                     "lokaal": "J093",
                     "homework": ""
                 },
-                "lesson_3": {
+                {
                     "name": "Scheikunde",
+                    "code": "SK",
                     "lokaal": "J047",
                     "homework": ""
                 },
-                "lesson_4": {
+                {
                     "name": "Natuurkunde",
+                    "code": "NA",
                     "lokaal": "J254",
                     "homework": ""
                 },
-                "lesson_5": {
+                {
                     "name": "Maatschapijleer",
+                    "code": "MA",
                     "lokaal": "J244",
                     "homework": ""
                 },
-                "lesson_6": {
+                {
                     "name": "Duits",
+                    "code": "DU",
                     "lokaal": "J122",
                     "homework": ""
                 },
-                "lesson_7": {
+                {
                     "name": "Wiskunde",
+                    "code": "WI",
                     "lokaal": "J372",
                     "homework": ""
                 },
-                "lesson_8": {
+                {
                     "name": "Frans",
+                    "code": "FA",
                     "lokaal": "J123",
                     "homework": ""
                 },
-                "lesson_9": {
+                {
                     "name": "Aardrijkskunde",
+                    "code": "AK",
                     "lokaal": "J263",
                     "homework": ""
                 }
-            }],
-            "friday": [{
-                "lesson_1": {
-                    "name": "Biologie",
-                    "lokaal": "J117",
-                    "homework": ""
-                },
-                "lesson_2": {
-                    "name": "Frans",
-                    "lokaal": "J033",
-                    "homework": ""
-                },
-                "lesson_3": {
-                    "name": "Scheikunde",
-                    "lokaal": "J097",
-                    "homework": ""
-                },
-                "lesson_4": {
-                    "name": "Natuurkunde",
-                    "lokaal": "J037",
-                    "homework": ""
-                },
-                "lesson_5": {
-                    "name": "Duits",
-                    "lokaal": "J814",
-                    "homework": ""
-                }
-            }]
+            ]
+        }],
+        "friday": [{
+            "lessons": [
+            {
+                "name": "Biologie",
+                "code": "BIO",
+                "lokaal": "J117",
+                "homework": ""
+            },
+            {
+                "name": "Frans",
+                "code": "FA",
+                "lokaal": "J033",
+                "homework": ""
+            },
+            {
+                "name": "Scheikunde",
+                "code": "SK",
+                "lokaal": "J097",
+                "homework": ""
+            },
+            {
+                "name": "Natuurkunde",
+                "lokaal": "J037",
+                "homework": ""
+            },
+            {
+                "name": "Duits",
+                "code": "DU",
+                "lokaal": "J814",
+                "homework": ""
+            }
+        ]
         }]
     }
-]
+},
+{
+    "week_2": {
+        "monday": [{
+            "lessons": [
+                {
+                    "name": "Nederlands",
+                    "lokaal": "J117",
+                    "homework": ""
+                },
+                {
+                    "name": "Geschiedenis",
+                    "lokaal": "J033",
+                    "homework": ""
+                },
+                {
+                    "name": "Maatschapijleer",
+                    "lokaal": "J097",
+                    "homework": ""
+                },
+                {
+                    "name": "Natuurkunde",
+                    "lokaal": "J037",
+                    "homework": ""
+                },
+                {
+                    "name": "Muziek",
+                    "lokaal": "J814",
+                    "homework": ""
+                },
+                {
+                    "name": "Aardrijkskunde",
+                    "lokaal": "J1202",
+                    "homework": ""
+                },
+                {
+                    "name": "Tekenen",
+                    "lokaal": "J642",
+                    "homework": ""
+                }
+            ]
+        }],
+        "tuesday": [{
+            "lessons": [
+                {
+                    "name": "ITTL",
+                    "lokaal": "J137",
+                    "homework": ""
+                },
+                {
+                    "name": "ITTL",
+                        "lokaal": "J137",
+                    "homework": ""
+                },
+                {
+                    "name": "Wiskunde",
+                    "lokaal": "J263",
+                    "homework": ""
+                },
+                {
+                    "name": "Techniek",
+                    "lokaal": "J472",
+                    "homework": ""
+                },
+                {
+                    "name": "LO",
+                    "lokaal": "L17",
+                    "homework": ""
+                },
+                {
+                    "name": "LO",
+                    "lokaal": "L17",
+                    "homework": ""
+                }
+            ]
+        }],
+        "wednesday": [{
+            "lessons": [
+                {
+                    "name": "Wiskunde",
+                    "lokaal": "J363",
+                    "homework": ""
+                },
+                {
+                    "name": "Natuurkunde",
+                    "lokaal": "J271",
+                    "homework": ""
+                },
+                {
+                    "name": "Scheikunde",
+                    "lokaal": "J102",
+                    "homework": ""
+                },
+                {
+                    "name": "Frans",
+                    "lokaal": "J153",
+                    "homework": ""
+                },
+                {
+                    "name": "Mentorles",
+                    "lokaal": "J183",
+                    "homework": ""
+                }
+            ]
+        }],
+        "thursday": [{
+            "lessons": [
+                {
+                    "name": "Biologie",
+                    "lokaal": "J093",
+                    "homework": ""
+                },
+                {
+                    "name": "Biologie",
+                    "lokaal": "J093",
+                    "homework": ""
+                },
+                {
+                    "name": "Scheikunde",
+                    "lokaal": "J047",
+                    "homework": ""
+                },
+                {
+                    "name": "Natuurkunde",
+                    "lokaal": "J254",
+                    "homework": ""
+                },
+                {
+                    "name": "Maatschapijleer",
+                    "lokaal": "J244",
+                    "homework": ""
+                },
+                {
+                    "name": "Duits",
+                    "lokaal": "J122",
+                    "homework": ""
+                },
+                {
+                    "name": "Wiskunde",
+                    "lokaal": "J372",
+                    "homework": ""
+                },
+                {
+                    "name": "Frans",
+                    "lokaal": "J123",
+                    "homework": ""
+                },
+                {
+                    "name": "Aardrijkskunde",
+                    "lokaal": "J263",
+                    "homework": ""
+                }
+            ]
+        }],
+        "friday": [{
+            "lessons": [
+                {
+                    "name": "Biologie",
+                    "lokaal": "J117",
+                    "homework": ""
+                },
+                {
+                    "name": "Frans",
+                    "lokaal": "J033",
+                    "homework": ""
+                },
+                {
+                    "name": "Scheikunde",
+                    "lokaal": "J097",
+                    "homework": ""
+                },
+                {
+                    "name": "Natuurkunde",
+                    "lokaal": "J037",
+                    "homework": ""
+                },
+                {
+                    "name": "Duits",
+                    "lokaal": "J814",
+                    "homework": ""
+                }
+            ]
+        }]
+    }
+}]

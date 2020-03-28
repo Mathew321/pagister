@@ -1,51 +1,44 @@
 <template>
     <div>
-
+      <info-block :infoData="info"/>
     </div>
 </template>
 
 <script>
+import InfoBlock from "./InfoBlock.vue"
+import agenda from '../data/Agenda.json'
+
 export default {
   name: 'AgendaPage',
-  data() {
-    return {
-      menu: [{
-        header: true,
-        title: 'Main Navigation',
-        hiddenOnCollapse: true
-        },
-        {
-        href: '/Main',
-        title: 'Vandaag',
-        icon: ''
-        },
-        {
-        href: '/Profile',
-        title: 'Profile',
-        icon: '',
-        },
-        {
-        href: '/Agenda',
-        title: 'Agenda',
-        icon: '',
-        },
-        {
-        href: '/Cijfers',
-        title: 'Cijfers',
-        icon: '',
-        }
-      ]
-    };
+  components: {
+    InfoBlock
   },
-  methods: {
-    getData() {
-      var users = require('../data/Users.json');
-      console.log("First user: " + users[0].User); 
-    }
+  data: function() {
+    return {
+      info: {
+        header: "Agenda",
+        items: agenda[0].week_1.monday.map(day => day.lessons)
+      }
+    };
   }
 }
 </script>
 
 <style scoped>
-
+.half-page-block {
+  display: inline-block;
+  width: 40%;
+}
+.v-sidebar-menu {
+  width: 200px;
+}
+.v-sidebar-menu-vsm_collapsed {
+  padding-left: 35px;
+}
+#main-view {
+  padding-left: 200px;
+}
+#main-view-collapsed {
+  padding-left: 50px;
+}
 </style>

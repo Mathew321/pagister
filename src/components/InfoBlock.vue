@@ -1,53 +1,68 @@
 <template>
-    <ul>
-        <li class="block-header">
-            <h3>Header</h3>
-            <br>
-        </li>
-            <li class="class1">
-            <h4></h4>
-            <span> </span>
-        </li>
-    </ul>
+    <div class="info-block">
+        <ul>
+            <li class="block-header">
+                <span>{{infoData.header}}</span>
+            </li>
+            <li v-for="(item, index) in infoData.items[0]" :key="index">
+                <span v-show="infoData.header === 'Vandaag'">{{ item.name }}</span>
+                <div v-show="infoData.header === 'Huiswerk'">
+                   <span class="code">{{item.code}}:&nbsp;</span><span>{{ item.homework }}</span>
+                </div>
+                <span v-show="infoData.header === 'Berichten'">{{ item }}</span>
+                <div v-show="infoData.header === 'Cijfers'">
+                   <span class="code">{{ item.vak }}:&nbsp;</span><span>{{ item.cijfer }}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script>
-export default{
-    props: {
-        infoList: {
-            type: Array,
-            required: true
-        }
+export default {
+    name: "InfoBlock",
+    props: ['infoData'],
+    methods: {
     }
 }
 </script>
 
 <style scoped>
-
-.class1 {
-border-radius: 0px 0px 15px 15px;
-  padding-top: 150px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-}
-
-
-ul {
-    list-style-type:none;
-}
-li {
-    border: 1px solid;
-    text-align: left;
-    background-color: rgba(134, 122, 122, 0.541);
-}
-li:hover {
-    
-    pointer-events:none;
+.info-block {
+    -webkit-box-shadow: 2px 2px 12px 0px rgba(158,155,158,1);
+    -moz-box-shadow: 2px 2px 12px 0px rgba(158,155,158,1);
+    box-shadow: 2px 2px 12px 0px rgba(158,155,158,1);
+    min-height: 250px;
+    width: 200px;
+    margin: 10px;
+    display: inline-block;
 }
 .block-header {
-    background-color:rgba(90, 86, 86, 0.219);
-    pointer-events:none;
-    border-radius: 15px 15px 0px 0px;
+    background-color: rgb(240, 228, 209);
+    border-bottom: 2px solid #ccc;
+    vertical-align: middle;
+    margin: 0px;
+}
+.code {
+    color:rgb(208, 196, 196)
+}
+ul {
+    list-style-type:none;
+    padding: 0px;
+    margin: 0px;
+    color: rgb(78, 77, 77);
+}
+li {
+    text-align: left;
+    padding: 4px;
+    border-bottom:1px solid #ccc;
+    vertical-align: middle;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+li:hover{
+    cursor: pointer;
+    background-color: rgb(240, 228, 209);
 }
 </style>
