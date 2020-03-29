@@ -30,10 +30,10 @@
         <input v-model="password" type="password" placeholder="Wachtwoord" name="pwd" required>
         <br>
 
-        <input v-on:click="login(uname, password)" type="submit" value="Login" />
+        <input v-on:click="login(uname, password)" type="button" value="Login" />
         <br>
         <div id="regknop">
-        <input v-on:click="login(uname, password)" type="submit" value="Maak een account" />
+        <input v-on:click="login(uname, password)" type="button" value="Maak een account" />
           
         <label>
           <input id="cb" type="checkbox" checked="checked" name="remember"> Onthoud mij
@@ -72,7 +72,6 @@ export default {
         console.log("Login Success");
         console.log("User id: " + users[index].id);
         this.$store.userId= users[index].id;
-        console.log("User id from store: " + this.$store.userId)
         this.$router.push("/Main");
         return true;
       }
@@ -126,7 +125,7 @@ input[type=password], select {
   box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type=button] {
   width: 300px;
   background-color: #4CAF50;
   color: white;
@@ -137,11 +136,11 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type=button]:hover {
   background-color: #45a049;
 }
 
-#regknop input[type=submit] {
+#regknop input[type=button] {
   width: 170px;
   background-color: #4CAF50;
   color: white;
@@ -152,7 +151,7 @@ input[type=submit]:hover {
   cursor: pointer;
 }
 
-#regknop input[type=submit]:hover {
+#regknop input[type=button]:hover {
   background-color: #45a049;
 }
 </style>

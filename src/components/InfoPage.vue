@@ -50,13 +50,14 @@ export default {
         default: return week.monday.map(day => day.lessons)
       }
     },
-    getMarks() {
-      var userId = this.$store.userId;
-      var index = users.map(e => e.id).indexOf(userId);
-      return [users[index].cijfers];
-    },
     getLastMark() {
       var userId = this.$store.userId;
+      if (!userId) {
+        this.$router.push('/Login')
+      }
+      if (!userId) {
+        this.$router.push('/Login')
+      }
       var index = users.map(e => e.id).indexOf(userId);
       var cijfersWithDates = users[index].cijfers.map(cijfer => {
         const container = {};
@@ -68,7 +69,6 @@ export default {
       var lastMark = cijfersWithDates.reduce(function(prev, curr) {
           return prev.date > curr.date ? prev : curr;
       });
-      console.log(lastMark);
       return [[lastMark]];
     }
   }

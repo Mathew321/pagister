@@ -27,11 +27,15 @@ export default {
         require('../assets/' + login + '.png');
         return login;
       } catch(err) {
+        console.log("Profile photo not found!")
         return "anonymous"
       }
     },
     getUser() {
       var userId = this.$store.userId;
+      if (!userId) {
+        this.$router.push('/Login')
+      }
       var index = users.map(e => e.id).indexOf(userId);
       return users[index];
     }

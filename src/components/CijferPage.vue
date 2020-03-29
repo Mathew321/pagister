@@ -36,6 +36,9 @@ export default {
   methods: {
     getMarks() {
         var userId = this.$store.userId;
+        if (!userId) {
+          this.$router.push('/Login')
+        }
         var index = users.map(e => e.id).indexOf(userId);
         var options = { year: 'numeric', month: 'long', day: 'numeric' };
         
