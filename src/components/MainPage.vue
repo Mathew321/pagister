@@ -1,7 +1,13 @@
 <template>
 <div class="main-container">
     <div id="main-view" :class="[{'collapsed' : collapsed}]">
-      <sidebar-menu :collapsed="collapsed" :menu="menu" @collapse="on-collapse" @item-click="onItemClick" >
+      <sidebar-menu :collapsed="collapsed" :menu="menu" @collapse="onCollapse" @item-click="onItemClick" >
+        <div slot="footer">
+          <button class="logout-button" v-on:click="logout()">
+            <i class="fa fa-sign-out-alt"></i>
+            <span>&nbsp;Logout</span>
+          </button>
+        </div>
         <span slot="toggle-icon"><i class="fa fa-arrows-alt-h" /></span>
       </sidebar-menu>
       <info-page  v-show="infopage" />
@@ -58,9 +64,12 @@ export default {
     };
   },
   methods: {
+    logout() {
+      this.$store.userId = null;
+      this.$router.push('/Login');
+    },
     onCollapse (collapsed) {
-      console.log("collapsed: " + collapsed)
-      this.collapsed = collapsed
+      this.collapsed = collapsed;
     },
     onItemClick(event, item) {
       if (item.title === "Vandaag") {
@@ -100,6 +109,16 @@ width: 200px;
 
 .v-sidebar-menu-vsm_collapsed {
 padding-left: 35px;
+}
+
+.logout-button {
+  width: 100%;
+  background-color: black;
+  color: white;
+  border: 0px;
+  opacity: 0.5;
+  height: 40px;
+  padding-left: 0px;
 }
 
 .main-container {

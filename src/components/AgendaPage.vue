@@ -67,13 +67,7 @@ export default {
   },
   data() {
     return {
-      agenda: this.getAgenda()
-    }
-  },
-  methods: {
-    getAgenda() {
-      console.log(agenda[0].week_1)
-      return agenda[0].week_1;
+      agenda: agenda[0].week_1
     }
   }
 }
