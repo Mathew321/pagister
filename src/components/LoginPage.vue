@@ -91,7 +91,7 @@ export default {
   font-family: 'Sen', sans-serif;
   font-style: bold;
   font-size: 45px;
-  color: darkolivegreen;
+  color: #2c7827;
 }
 
 #loginteksten #logintekst{
@@ -127,7 +127,7 @@ input[type=password], select {
 
 input[type=button] {
   width: 300px;
-  background-color: #4CAF50;
+  background-color: #2c7827;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -142,7 +142,7 @@ input[type=button]:hover {
 
 #regknop input[type=button] {
   width: 170px;
-  background-color: #4CAF50;
+  background-color: #2c7827;
   color: white;
   padding: 14px 20px;
   margin: 8px 10px 8px 0px;

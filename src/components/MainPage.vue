@@ -1,4 +1,6 @@
 <template>
+<div>
+  <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
 <div class="main-container">
     <div id="main-view" :class="[{'collapsed' : collapsed}]">
       <sidebar-menu :collapsed="collapsed" :menu="menu" @collapse="onCollapse" @item-click="onItemClick" >
@@ -15,6 +17,7 @@
       <cijfer-page  v-show="cijfers" />
       <profile-page  v-show="profile" />
   </div>
+</div>
 </div>
 </template>
 
@@ -105,6 +108,7 @@ export default {
 <style scoped>
 .v-sidebar-menu {
 width: 200px;
+font-family: 'Sen', sans-serif;
 }
 
 .v-sidebar-menu-vsm_collapsed {

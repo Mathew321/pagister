@@ -1,4 +1,14 @@
 <template>
+<div>
+ <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+  <div class="bovenbalk">
+    Agenda
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 <div class="agenda-container">
   <table class="agenda-table">
     <th colspan=4>
@@ -55,6 +65,7 @@
       <td class="homework">{{item.homework}}</td>
     </tr>
   </table>
+</div>
 </div>
 </template>
 

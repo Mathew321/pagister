@@ -1,4 +1,14 @@
 <template>
+<div>
+ <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+  <div class="bovenbalk">
+    Cijfers
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
     <div class="info-container">
       <div class="info-block">
         <table class="cijfers-table">
@@ -17,6 +27,7 @@
             <td class="cijfer-date">{{item.date}}</td>
           </tr>
         </table>
+    </div>
     </div>
     </div>
 </template>
@@ -97,5 +108,19 @@ td {
 tr:hover{
     cursor: pointer;
     background-color: rgb(240, 228, 209);
+}
+
+.bovenbalk{
+  position: fixed;
+  background-color: #2a2a2e;
+  width: 1300px;
+  text-align: left;
+  font-family: 'Sen', sans-serif;
+  font-style: bold;
+  font-size: 50px;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
 }
 </style>

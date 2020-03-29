@@ -1,9 +1,20 @@
 <template>
+<div>
+ <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+  <div class="bovenbalk">
+    Vandaag
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <div class="info-container">
     <info-block :infoData="today"/>
     <info-block :infoData="homework"/>
     <info-block :infoData="mail"/>
     <info-block :infoData="marks"/>
+  </div>
   </div>
 </template>
 
@@ -79,5 +90,19 @@ export default {
 .info-container {
   display: flex;
   width: 700px;
+}
+
+.bovenbalk{
+  position: fixed;
+  background-color: #2a2a2e;
+  width: 1300px;
+  text-align: left;
+  font-family: 'Sen', sans-serif;
+  font-style: bold;
+  font-size: 50px;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
 }
 </style>
