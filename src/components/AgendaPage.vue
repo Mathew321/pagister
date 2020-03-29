@@ -1,44 +1,133 @@
 <template>
-    <div>
-      <info-block :infoData="info"/>
-    </div>
+<div class="agenda-container">
+  <table class="agenda-table">
+    <th colspan=4>
+      <td>Maandag</td>
+    </th>
+    <tr v-for="(item, index) in agenda.monday[0].lessons" :key="index">
+      <td class="lesson">{{ item.name }}</td>
+      <td class="code">{{ item.code }}</td>
+      <td class="lokaal">{{ item.lokaal }}</td>
+      <td class="homework">{{item.homework}}</td>
+    </tr>
+  </table>
+  <table class="agenda-table">
+    <th colspan=4>
+      <td>Dinsdag</td>
+    </th>
+    <tr v-for="(item, index) in agenda.tuesday[0].lessons" :key="index">
+      <td class="lesson">{{ item.name }}</td>
+      <td class="code">{{ item.code }}</td>
+      <td class="lokaal">{{ item.lokaal }}</td>
+      <td class="homework">{{item.homework}}</td>
+    </tr>
+  </table>
+  <table class="agenda-table">
+    <th colspan=4>
+      <td>Woensdag</td>
+    </th>
+    <tr v-for="(item, index) in agenda.wednesday[0].lessons" :key="index">
+      <td class="lesson">{{ item.name }}</td>
+      <td class="code">{{ item.code }}</td>
+      <td class="lokaal">{{ item.lokaal }}</td>
+      <td class="homework">{{item.homework}}</td>
+    </tr>
+  </table>
+  <table class="agenda-table">
+    <th colspan=4>
+      <td>Donderdag</td>
+    </th>
+    <tr v-for="(item, index) in agenda.thursday[0].lessons" :key="index">
+      <td class="lesson">{{ item.name }}</td>
+      <td class="code">{{ item.code }}</td>
+      <td class="lokaal">{{ item.lokaal }}</td>
+      <td class="homework">{{item.homework}}</td>
+    </tr>
+  </table>
+  <table class="agenda-table">
+    <th colspan=4>
+      <td>Vrijdag</td>
+    </th>
+    <tr v-for="(item, index) in agenda.friday[0].lessons" :key="index">
+      <td class="lesson">{{ item.name }}</td>
+      <td class="code">{{ item.code }}</td>
+      <td class="lokaal">{{ item.lokaal }}</td>
+      <td class="homework">{{item.homework}}</td>
+    </tr>
+  </table>
+</div>
 </template>
 
 <script>
-import InfoBlock from "./InfoBlock.vue"
 import agenda from '../data/Agenda.json'
 
 export default {
   name: 'AgendaPage',
   components: {
-    InfoBlock
   },
-  data: function() {
+  data() {
     return {
-      info: {
-        header: "Agenda",
-        items: agenda[0].week_1.monday.map(day => day.lessons)
-      }
-    };
+      agenda: this.getAgenda()
+    }
+  },
+  methods: {
+    getAgenda() {
+      console.log(agenda[0].week_1)
+      return agenda[0].week_1;
+    }
   }
 }
 </script>
 
 <style scoped>
-.half-page-block {
-  display: inline-block;
-  width: 40%;
+.agenda-container {
+  display: block;
+  width: 500px;
 }
-.v-sidebar-menu {
-  width: 200px;
+
+.agenda-table {
+    -webkit-box-shadow: 2px 2px 12px 0px rgba(158,155,158,1);
+    -moz-box-shadow: 2px 2px 12px 0px rgba(158,155,158,1);
+    box-shadow: 2px 2px 12px 0px rgba(158,155,158,1);
+    margin: 10px;
+    display: inline-block;
+    margin:0;
 }
-.v-sidebar-menu-vsm_collapsed {
-  padding-left: 35px;
+th {
+    background-color: rgb(240, 228, 209);
+    border-bottom: 2px solid #ccc;
+    vertical-align: middle;
+    margin: 0px;
 }
-#main-view {
-  padding-left: 200px;
+.lesson {
+  width: 150px;
 }
-#main-view-collapsed {
-  padding-left: 50px;
+.code {
+  width: 50px;
+  color:rgb(208, 196, 196)
+}
+.lokaal {
+   width: 50px;
+}
+.homework {
+  width: 350px;
+}
+tr {
+    padding: 0px;
+    margin: 0px;
+    color: rgb(78, 77, 77);
+}
+td {
+    text-align: left;
+    padding: 4px;
+    border-bottom:1px solid #ccc;
+    vertical-align: middle;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+tr:hover{
+    cursor: pointer;
+    background-color: rgb(240, 228, 209);
 }
 </style>

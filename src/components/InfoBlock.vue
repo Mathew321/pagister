@@ -10,7 +10,7 @@
                    <span class="code">{{item.code}}:&nbsp;</span><span>{{ item.homework }}</span>
                 </div>
                 <span v-show="infoData.header === 'Berichten'">{{ item }}</span>
-                <div v-show="infoData.header === 'Cijfers'">
+                <div v-show="infoData.header === 'Laatste Cijfer'">
                    <span class="code">{{ item.vak }}:&nbsp;</span><span>{{ item.cijfer }}</span>
                 </div>
             </li>

@@ -32,16 +32,12 @@ export default {
         items: [["Laatste update", "Nieuws", "Vieren: Koningsdag!"]]
       },
       marks: {
-        header: "Cijfers",
-        items: this.getMarks()
+        header: "Laatste Cijfer",
+        items: this.getLastMark()
       }
     };
   },
   methods: {
-    getData() {
-      var users = require('../data/Users.json');
-      console.log("First user: " + users[0].User); 
-    },
     getLessonsForToday() {
       var dayOfTheWeek = (new Date()).getDay();
       var week = agenda[0].week_1;
@@ -56,10 +52,24 @@ export default {
     },
     getMarks() {
       var userId = this.$store.userId;
-      console.log("User id: " + userId);
       var index = users.map(e => e.id).indexOf(userId);
-      console.log(users[index].cijfers[0]);
       return [users[index].cijfers];
+    },
+    getLastMark() {
+      var userId = this.$store.userId;
+      var index = users.map(e => e.id).indexOf(userId);
+      var cijfersWithDates = users[index].cijfers.map(cijfer => {
+        const container = {};
+        container.vak = cijfer.vak;
+        container.cijfer = cijfer.cijfer;
+        container.date = new Date(cijfer.date);
+        return container;
+      });
+      var lastMark = cijfersWithDates.reduce(function(prev, curr) {
+          return prev.date > curr.date ? prev : curr;
+      });
+      console.log(lastMark);
+      return [[lastMark]];
     }
   }
 }
