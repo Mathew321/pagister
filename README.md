@@ -1,21 +1,22 @@
 # Pagister
 
-**Pagister** is great high-school time-table app! Demo version is [here](https://pagister-moxin4gnyq-ez.a.run.app/Login).
-Only registered users can login. For now it has only two users: *matvei* and *marcin*
-The app has a sidebar menu and four views:
-- main view
-    - lessons for today
+**Pagister** is goede time-table app voor middelbare school! Demo versie is [here](https://pagister-moxin4gnyq-ez.a.run.app/Login).
+Alleen geregistreerde users kunnen inloggen. Voor nu heeft het alleen Twee users: *matvei* en *marcin*
+De app heeft een sidebar menu en vier beelden:
+- Hoofd beeld
+    - lessen voor vandaag (afhankelijk van welke dag het is, worden er lessen laten zien)
     - mail
-    - homework
-    - latest mark
-- profile view
-    - user photo (if no photo, the anonymous-user image is displayed)
+    - huiswerk
+    - laatse cijfers
+- Profile beeld
+    - user foto (als er geen foto aanwezig is, dan zie je een anonymous-user plaatje)
     - user name
-    - class
+    - klas
 - agenda
-    - lessons per week
-- marks
-    - all latest marks of the user
+    - lessen van de week
+    - de en wordt ook huiswerk laten zien
+- cijfers
+    - Alle laatste cijfers van de user
 
 ## Project setup
 
