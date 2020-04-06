@@ -1,7 +1,7 @@
 <template>
 <div>
   <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
-<div class="main-container">
+    <div class="main-container">
     <div id="main-view" :class="[{'collapsed' : collapsed}]">
       <sidebar-menu :collapsed="collapsed" :menu="menu" @collapse="onCollapse" @item-click="onItemClick" >
         <div slot="footer">
@@ -16,8 +16,8 @@
       <agenda-page  v-show="agenda" />
       <cijfer-page  v-show="cijfers" />
       <profile-page  v-show="profile" />
+    </div>
   </div>
-</div>
 </div>
 </template>
 
